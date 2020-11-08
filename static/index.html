@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>RuedigerCast</title>
+</head>
+
+<body>
+    <h1>RüdigerCast</h1>
+
+    <form method="post" action="/start">
+        <input type="text" name="url" />
+        <input type="submit" />
+    </form>
+
+    <form method="post" action="/control/stop">
+        <input type="submit" value="Stop" />
+    </form>
+
+    <form method="post" action="/control/pause">
+        <input type="submit" value="Pause" />
+    </form>
+
+    <form method="post" action="/control/fwd">
+        <input type="submit" value="Forward" />
+    </form>
+    <form method="post" action="/control/rwd">
+        <input type="submit" value="Rewind" />
+    </form>
+</body>
+
+</html>
