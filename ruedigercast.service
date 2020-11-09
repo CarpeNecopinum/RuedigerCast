@@ -1,0 +1,11 @@
+[Unit]
+Description=Chromecast alternative for Ruediger
+After=network.target auditd.service
+
+[Service]
+Type=simple
+ExecStart=/home/pi/ruedigercast/run.sh
+User=pi
+
+[Install]
+WantedBy=multi-user.target
