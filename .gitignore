@@ -1,3 +1,5 @@
 node_modules/
 .vscode
 *.png
+secret
+google_oauth.json

@@ -13,6 +13,15 @@ export function run(cmd: string) {
     })
 }
 
+export async function runMultitry(cmd: string, tries = 3) {
+    try {
+        return await run(cmd)
+    } catch (e) {
+        if (tries > 0) return await runMultitry(cmd, tries - 1)
+        throw e
+    }
+}
+
 const width = 1680
 const height = 1050
 
