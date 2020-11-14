@@ -8,6 +8,7 @@
     "dev": "ts-node-dev index.ts",
     "dev-screens": "ts-node-dev screens.tsx",
     "dev-photos": "ts-node-dev phototest.ts",
+    "build": "tsc -p .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

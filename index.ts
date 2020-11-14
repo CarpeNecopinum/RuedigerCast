@@ -2,7 +2,7 @@ import express from 'express'
 import bodyParser from 'body-parser'
 import { ChildProcess, spawn } from 'child_process'
 import { showError, showLoading } from './messages'
-import { clearScreen, run, runMultitry } from './utils'
+import { clearScreen, readFramebufferSize, run, runMultitry } from './utils'
 import fs from 'fs'
 import slideshow from './slideshow'
 
@@ -17,6 +17,8 @@ const www = __dirname + "/static/"
 const app = express()
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
+
+readFramebufferSize()
 
 app.get("/", (req, res) => {
     res.sendFile(www + "index.html")
